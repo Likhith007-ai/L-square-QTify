@@ -20,4 +20,4 @@ const CarouselRightNavigation = () => {
   )
 }
 
-export default CarouselRightNavigation;
+export default CarouselRightNavigation

@@ -38,4 +38,4 @@ const FilterSection = ({
   )
 }
 
-export default FilterSection;
+export default FilterSection

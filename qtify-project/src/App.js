@@ -1,9 +1,9 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Hero from './components/Hero/Hero.jsx'
-import styles from './App.css'
+import styles from './App.module.css'
 import { useEffect, useState } from 'react'
-import { fetchTopAlbums, fetchNewAlbums, fetchSongs } from "./api/api"
+import { fetchTopAlbums, fetchNewAlbums, fetchSongs } from './api/api'
 import Section from './components/Section/Section.jsx'
 import FilterSection from './components/FilterSection/FilterSection'
 
@@ -120,16 +120,16 @@ function App() {
   
   
   return (
-   <>
-   <Navbar />
+    <>
+      <Navbar />
       <Hero />
-     <div className={styles.sectionWrapper}>
+      <div className={styles.sectionWrapper}>
         <Section type='album' title='Top Albums' data={topAlbumSongs} />
-      <Section type='album' title='New Albums' data={newAlbumSongs} />
-         <FilterSection data={newAlbumSongs} type='songFilter' title='Songs' filteredData={filteredData} filteredDataValues={filteredDataValues} value={value} handleChange={handleChange} handleToggle={handleToggle}/> 
-       </div> 
-     </>
- )
+        <Section type='album' title='New Albums' data={newAlbumSongs} />
+        <FilterSection data={newAlbumSongs} type='songFilter' title='Songs' filteredData={filteredData} filteredDataValues={filteredDataValues} value={value} handleChange={handleChange} handleToggle={handleToggle}/>
+      </div>
+    </>
+  )
 }
 
- export default App;
+export default App
